@@ -98,7 +98,6 @@ namespace VX
                     }
                     std::stringstream result_as_hex;
                     result_as_hex << std::hex << std::uppercase << result;
-                    //  g_log.send("Pattern", "Found '{}' GTA5.exe+{}", name, result_as_hex.str());
                     g_memory.m_sig_count++;
                     break;
                 }
