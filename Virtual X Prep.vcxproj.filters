@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Hooking">
+      <UniqueIdentifier>{1a2cc714-d80d-4ff8-892d-e8f84c85ac20}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Hooking\detour">
+      <UniqueIdentifier>{9a1d356b-8479-436b-9c9a-7de3be49bbcd}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="hooking\hooking.cpp">
+      <Filter>Hooking</Filter>
+    </ClCompile>
+    <ClCompile Include="memory\memory.cpp" />
+    <ClCompile Include="pointers\pointers.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="common.hpp" />
+    <ClInclude Include="hooking\detour\detour.hpp">
+      <Filter>Hooking\detour</Filter>
+    </ClInclude>
+    <ClInclude Include="hooking\hooking.hpp">
+      <Filter>Hooking</Filter>
+    </ClInclude>
+    <ClInclude Include="hooking\hooks\news_story_request_handle_received_data.hpp" />
+    <ClInclude Include="gta\sc_news_story.hpp" />
+    <ClInclude Include="memory\memory.hpp" />
+    <ClInclude Include="pointers\pointers.hpp" />
+    <ClInclude Include="memory\dll.hpp" />
+  </ItemGroup>
+</Project>
