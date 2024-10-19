@@ -26,14 +26,7 @@ BOOL DllMain(HINSTANCE hInstance, DWORD reason, LPVOID) {
 				while (g_running) {
 					if (inject) {
 						std::thread t([=]() mutable {
-							HMODULE module = LoadLibraryA("C:\\RDR2.dll");
-							if (module == nullptr) {
-								MessageBoxA(NULL, "Failed To Inject Virtual X", "Services", MB_OK | MB_ICONERROR);
-							}
-							else {
-								module_handles.push_back(module);
-							}
-							});
+							MessageBoxA(NULL, "Sucessfuly Inject Virtual X", "Services", MB_OK);
 						t.detach();
 					}
 					if (GetAsyncKeyState(VK_F7) & 0x8000) {
